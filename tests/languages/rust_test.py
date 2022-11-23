@@ -56,6 +56,7 @@ def test_installs_with_bootstrapped_rustup(tmpdir, language_version):
 
         Also log the arguments to ensure that everything works as expected.
         """
+        print(f'*** EXE: {exe}')
         find_executable_exes.append(exe)
         if len(find_executable_exes) == 1:
             return None

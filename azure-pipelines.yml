@@ -19,3 +19,7 @@ jobs:
     os: windows
     additional_variables:
       TEMP: C:\Temp
+- template: job--python-tox.yml@asottile
+  parameters:
+    toxenvs: [py37, py38, py39]
+    os: linux
