@@ -71,3 +71,7 @@ def test_installs_with_bootstrapped_rustup(tmpdir, language_version):
 
     with rust.in_env(prefix, language_version):
         assert cmd_output('hello_world')[1] == 'Hello, world!\n'
+
+
+def test_wat_wat_wat():
+    assert parse_shebang.find_executable('rustup') is not None
