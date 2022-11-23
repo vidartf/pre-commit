@@ -59,7 +59,9 @@ def test_installs_with_bootstrapped_rustup(tmpdir, language_version):
         print(f'*** EXE: {exe}')
         find_executable_exes.append(exe)
         if len(find_executable_exes) == 1:
+            print('-> returning None')
             return None
+        print(f'-> returning {original_find_executable(exe)}')
         return original_find_executable(exe)
 
     with mock.patch.object(parse_shebang, 'find_executable') as find_exe_mck:
