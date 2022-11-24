@@ -114,6 +114,8 @@ def install_rust_with_toolchain(toolchain: str) -> None:
                     rustup_init, '-y', '--quiet', '--no-modify-path',
                     '--default-toolchain', 'none',
                 )
+            else:
+                raise AssertionError('wat')
 
             cmd_output_b(
                 'rustup', 'toolchain', 'install', '--no-self-update',
